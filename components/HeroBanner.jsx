@@ -1,8 +1,7 @@
 import Link from "next/link"
-import { urlFor } from "@api/client"
+import Image from "next/image"
 
 const HeroBanner = ({ heroBanner }) => {
-  console.log(heroBanner)
 
   return (
     <div className="hero-banner-container">
@@ -10,7 +9,15 @@ const HeroBanner = ({ heroBanner }) => {
         <p className="beats-solo">{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
         <h1>{heroBanner.largeText1}</h1>
-        <img src={urlFor(heroBanner.image)} alt='headphones' className="hero-banner-image" />
+        <div className="hero-banner-image-container">
+          <Image
+            src={heroBanner.image}
+            fill
+            alt="headphones"
+            sizes="(max-width: 800px) 100vh, 450px"            
+          />
+        </div>
+
         <div>
           <Link href={`/product/${heroBanner.product}`}>
             <button type="button">{heroBanner.buttonText}</button>

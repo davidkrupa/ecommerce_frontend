@@ -2,11 +2,28 @@ import { Product, FooterBanner, HeroBanner } from '../components'
 import { getData } from '@api/getData';
 
 export default async function Home() {
-  const productsQuery = `*[_type == "product"]`
-  const bannerQuery = `*[_type == "banner"]`
+  const productsQuery = `*[_type == "product"]{
+      name,
+      price,
+      "slug": slug.current,
+      "image": image[0].asset->url
+    }`
 
-  const products = await getData(productsQuery);
+  const bannerQuery = `*[_type == "banner"]{
+      buttonText,
+      desc,
+      largeText1,
+      midText,
+      product,
+      smallText,
+      "image": image.asset->url
+    }`
+
+  const products = await getData(productsQuery)
   const bannerData = await getData(bannerQuery)
+
+  console.log(products)
+  console.log(bannerData)
  
   return (
       <div>
@@ -18,7 +35,7 @@ export default async function Home() {
         </div>
 
         <div className="products-container">
-          {products?.map((product) => product.name)}
+          {products?.map((product) => <Product key={product._id} product={product} />)}
         </div>
 
         <FooterBanner />
