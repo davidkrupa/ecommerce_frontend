@@ -9,7 +9,7 @@ const HeroBanner = ({ heroBanner }) => {
         <p className="beats-solo">{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
         <h1>{heroBanner.largeText1}</h1>
-        <div className="hero-banner-image-container">
+        <div className="hero-banner-image">
           <Image
             src={heroBanner.image}
             fill

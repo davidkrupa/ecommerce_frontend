@@ -16,12 +16,12 @@ a {
   text-decoration: none;
 }
 
-.main-container{
+.main-container {
 max-width: 1400px; 
 margin: auto;
 width: 100%;
-
 }
+
 .layout{
   padding: 10px;
 }
@@ -164,7 +164,7 @@ width: 100%;
   margin-left: -20px;
   text-transform: uppercase;
 }
-.hero-banner-image-container{
+.hero-banner-image{
   position: absolute;
   top: 0%;
   right:20%;
@@ -250,6 +250,8 @@ text-align: end;
   left: 8%; */
   top: -25%;
   left: 25%;
+  width: 50vw;
+  height: 50vw;
 }
 .banner-desc .right{
   line-height: 1.4;
@@ -420,10 +422,11 @@ padding: 30px 65px;
  margin: 40px;
  margin-top: 60px;
  color: #324d67;
-
 }
-
 .product-detail-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 15px;
    background-color: #ebebeb;
 
@@ -434,7 +437,6 @@ padding: 30px 65px;
 }
 .product-detail-image:hover{
   background-color: #f02d34;
-
 }
 .small-images-container{
   display: flex;
@@ -622,7 +624,7 @@ margin-top: 160px;
   .hero-banner-container{
     height: 560px;
   }
-  .hero-banner-image-container{
+  .hero-banner-image{
     width: 67vw;
     height: 67vw;
     top: -2%;
@@ -633,10 +635,10 @@ margin-top: 160px;
     margin-top: 80px;
   }
   .footer-banner-image{
-    width: 77%;
+    width: 450px;
+    height: 450px;
     left: 30%;
     top: 6%;
-    height: 56%
   }
   .banner-desc .left h3{
     font-weight: 900;

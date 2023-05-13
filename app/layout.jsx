@@ -1,3 +1,4 @@
+import { Footer, Navbar } from "@components";
 import "@styles/globals.css";
 
 export const metadata = {
@@ -8,9 +9,13 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang='en'>
     <body>
-        <main className='app'>
-          {children}
-        </main>
+      <header>
+        <Navbar />
+      </header>
+      <main className='main-container'>
+        {children}
+      </main>
+      <Footer />
     </body>
   </html>
 );

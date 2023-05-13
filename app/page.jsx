@@ -6,15 +6,18 @@ export default async function Home() {
       name,
       price,
       "slug": slug.current,
-      "image": image[0].asset->url
+      "image": image[].asset->url
     }`
 
   const bannerQuery = `*[_type == "banner"]{
       buttonText,
       desc,
+      discount,
       largeText1,
+      largeText2,
       midText,
       product,
+      saleTime,
       smallText,
       "image": image.asset->url
     }`
@@ -22,8 +25,6 @@ export default async function Home() {
   const products = await getData(productsQuery)
   const bannerData = await getData(bannerQuery)
 
-  console.log(products)
-  console.log(bannerData)
  
   return (
       <div>
@@ -38,7 +39,7 @@ export default async function Home() {
           {products?.map((product) => <Product key={product._id} product={product} />)}
         </div>
 
-        <FooterBanner />
+        <FooterBanner footerBanner={bannerData && bannerData[0]} />
       </div>
     )
     
