@@ -1,5 +1,6 @@
 import { Footer, Navbar } from "@components";
 import "@styles/globals.css";
+import { StateContext } from "../context/StateContext";
 
 export const metadata = {
   title: "",
@@ -9,13 +10,17 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang='en'>
     <body>
-      <header>
-        <Navbar />
-      </header>
-      <main className='main-container'>
-        {children}
-      </main>
-      <Footer />
+      <StateContext>
+        <header>
+          <Navbar />
+        </header>
+        <main className='main-container'>
+          {children}
+        </main>
+        <footer>
+          <Footer />
+        </footer>        
+      </StateContext>
     </body>
   </html>
 );

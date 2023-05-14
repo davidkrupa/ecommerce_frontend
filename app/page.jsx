@@ -36,7 +36,7 @@ export default async function Home() {
         </div>
 
         <div className="products-container">
-          {products?.map((product) => <Product key={product._id} product={product} />)}
+          {products?.map((product, index) => <Product key={`product-${index}`} product={product} />)}
         </div>
 
         <FooterBanner footerBanner={bannerData && bannerData[0]} />
