@@ -49,7 +49,7 @@ const ProductDetails = async ({ params: { slug } }) => {
           <p>{details}</p>
           <p className="price">${price}</p>
 
-          <ProductDetailsCart product={currentProduct} />
+          <ProductDetailsCart product={currentProduct[0]} />
 
         </div>
       </div>

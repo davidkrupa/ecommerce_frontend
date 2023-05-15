@@ -4,6 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 
 const ProductDetailsImages = ({ image }) => {
+
   const [index, setIndex] = useState(0)
 
   return (

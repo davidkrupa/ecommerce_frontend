@@ -2,10 +2,15 @@
 
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai"
 import { useStateContext } from "../context/StateContext" 
+import { useEffect } from "react"
 
 const ProductDetailsCart = ({ product }) => {
-  const { decQty, incQty, qty, onAdd } = useStateContext()
-  console.log(qty)
+  console.log(product)
+  const { decQty, incQty, qty, setQty, onAdd } = useStateContext()
+  
+  useEffect(() => {
+    setQty(1)
+  }, [])
 
   return (
     <>
@@ -19,7 +24,7 @@ const ProductDetailsCart = ({ product }) => {
       </div>
       <div className="buttons">
         <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
-        <button type="button" className="buy-now" onClick="">Buy Now</button>
+        <button type="button" className="buy-now" onClick={() => console.log("buy now clicked")}>Buy Now</button>
       </div>
     </>
   )

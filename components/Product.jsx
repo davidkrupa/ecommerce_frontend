@@ -12,6 +12,7 @@ const Product = ({ product: { image, name, slug, price } }) => {
               src={image && image[0]}
               width={250}
               height={250}
+              alt="product-card"
             />
           </div>
           <p className="product-name">{name}</p>
