@@ -21,7 +21,7 @@ const ProductDetails = async ({ params: { slug } }) => {
 
   const currentProduct = await getData(currentProductQuery)
   const products = await getData(productsQuery)
-
+  
   const { name, price, details, image } = currentProduct[0]
 
   return (

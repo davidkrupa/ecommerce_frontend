@@ -5,7 +5,6 @@ import { useStateContext } from "../context/StateContext"
 import { useEffect } from "react"
 
 const ProductDetailsCart = ({ product }) => {
-  console.log(product)
   const { decQty, incQty, qty, setQty, onAdd } = useStateContext()
   
   useEffect(() => {
