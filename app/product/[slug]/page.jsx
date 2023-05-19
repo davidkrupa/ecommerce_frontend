@@ -2,7 +2,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 
 import { getData } from "@api/getData"
 import { Product } from "@components"
-import { ProductDetailsImages, ProductDetailsCart } from "@components"
+import { ProductDetailsImages, ProductDetailsCart, ProductCarousel } from "@components"
 
 const ProductDetails = async ({ params: { slug } }) => {
   const currentProductQuery = `*[_type == "product" && slug.current == '${slug}']{
@@ -52,18 +52,24 @@ const ProductDetails = async ({ params: { slug } }) => {
           <ProductDetailsCart product={currentProduct[0]} />
 
         </div>
-      </div>
+      </div>      
+<div className="carousel-container">
+      <h2>You may also like</h2>
+      <ProductCarousel products={products} />
+</div>
 
-      <div className="maylike-products-wrapper">
-        <h2>You may also like</h2>
+      {/* <div className="maylike-products-wrapper"> */}
+        
+
+        {/* <h2>You may also like</h2>
         <div className="marquee">
           <div className="maylike-products-container track">
             {products.map((item, index) => (
               <Product key={index} product={item} />
             ))}
           </div>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   )
 }

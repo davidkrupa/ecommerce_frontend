@@ -5,11 +5,17 @@ import { useStateContext } from "../context/StateContext"
 import { useEffect } from "react"
 
 const ProductDetailsCart = ({ product }) => {
-  const { decQty, incQty, qty, setQty, onAdd } = useStateContext()
+  const { decQty, incQty, qty, setQty, onAdd, setShowCart } = useStateContext()
   
   useEffect(() => {
     setQty(1)
   }, [])
+
+  const handleBuyNow = () => {
+    onAdd(product, qty)
+
+    setShowCart(true)
+  }
 
   return (
     <>
@@ -23,7 +29,7 @@ const ProductDetailsCart = ({ product }) => {
       </div>
       <div className="buttons">
         <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
-        <button type="button" className="buy-now" onClick={() => console.log("buy now clicked")}>Buy Now</button>
+        <button type="button" className="buy-now" onClick={() => handleBuyNow()}>Buy Now</button>
       </div>
     </>
   )

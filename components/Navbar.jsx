@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Cart, NavbarCart } from "./"
+import { Cart, NavbarCart } from "."
 
 const Navbar = () => {
 

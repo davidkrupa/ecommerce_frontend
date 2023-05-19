@@ -19,6 +19,7 @@ export default async function Home() {
       product,
       saleTime,
       smallText,
+      "slug": slug.current,
       "image": image.asset->url
     }`
 

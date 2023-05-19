@@ -15,7 +15,9 @@ const ProductDetailsImages = ({ image }) => {
             src={image && image[index]}
             width={350}
             height={350}
+            priority
             alt="product"
+            sizes="(max-width: 800px) 100vh, 350px"  
           />
         </div>          
       </div>

@@ -3,8 +3,8 @@ import "@styles/globals.css";
 import { StateContext } from "../context/StateContext";
 
 export const metadata = {
-  title: "",
-  description: "",
+  title: "Ecommerce store",
+  description: "Our ecommerce store offers best quality products on the market",
 };
 
 const RootLayout = ({ children }) => (
