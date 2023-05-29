@@ -1,21 +1,23 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { BsBagCheckFill } from 'react-icons/bs';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { BsBagCheckFill } from "react-icons/bs";
 
-import { useStateContext } from '../../context/StateContext'
-import { runFireworks } from '@utils/fireworks';
+import { useStateContext } from "../../context/StateContext";
+import { runFireworks } from "@utils/fireworks";
 
 const Success = () => {
-  const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext()
-  
+  const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
+
   useEffect(() => {
     localStorage.clear();
     setCartItems([]);
     setTotalPrice(0);
     setTotalQuantities(0);
     runFireworks();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -39,7 +41,7 @@ const Success = () => {
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Success
+export default Success;
