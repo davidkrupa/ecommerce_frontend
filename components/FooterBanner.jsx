@@ -20,9 +20,12 @@ const FooterBanner = ({
       <div className="banner-desc">
         <div className="left">
           <p>{discount}</p>
-          <h3 className="top">{largeText1}</h3>
-          <h3>{largeText2}</h3>
+          <h3 className="top-title">{largeText1}</h3>
+          <h3 className="bottom-title">{largeText2}</h3>
           <p>{saleTime}</p>
+        </div>
+        <div className="background-sign">
+          <span>&</span>
         </div>
 
         <div className="footer-banner-image">
