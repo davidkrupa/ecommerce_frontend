@@ -155,7 +155,12 @@ span.text-red {
   width: 100%;
 }
 
-.hero-banner-container .beats-solo {
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.beats-solo {
   font-size: 20px;
   color: white;
 }
@@ -191,10 +196,10 @@ span.text-red {
 }
 .hero-banner-image {
   position: absolute;
-  top: -6%;
-  right: 10%;
-  width: 550px;
-  height: 550px;
+  top: 0;
+  right: 5%;
+  width: 500px;
+  height: 500px;
 }
 
 .desc {

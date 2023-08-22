@@ -4,9 +4,11 @@ import Image from "next/image";
 const HeroBanner = ({ heroBanner }) => {
   return (
     <div className="hero-banner-container">
-      <p className="beats-solo">{heroBanner.smallText}</p>
-      <h3>{heroBanner.midText}</h3>
-      <h1>{heroBanner.largeText1}</h1>
+      <div className="hero-text">
+        <p className="beats-solo">{heroBanner.smallText}</p>
+        <h3>{heroBanner.midText}</h3>
+        <h1>{heroBanner.largeText1}</h1>
+      </div>
       <div className="hero-banner-image">
         <Image
           src={heroBanner.image}
